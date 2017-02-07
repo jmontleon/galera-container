@@ -81,7 +81,7 @@
 
 - name: Remove mariadb_datadir
   file: 
-    path: /var/lib/mysql 
+    path: /var/lib/mysql/* 
     state: absent   
 
 - name: Set permissions on /var/log/mysql
