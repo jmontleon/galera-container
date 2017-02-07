@@ -25,7 +25,16 @@
     - pwgen
     - ansible
     - nss_wrapper
-
+    - MariaDB-Galera-server 
+    - MariaDB-client
+    - rsync
+    - galera
+    - socat
+    - hostname
+    - expect
+    - percona-xtrabackup
+    - which
+    - tar
 - name: Purge yum cache
   command: yum clean all
   when: mariadb_clean_yum_cache
