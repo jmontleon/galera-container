@@ -20,7 +20,7 @@ wsrep_provider=/usr/lib64/galera/libgalera_smm.so
 
 # Galera Cluster Configuration
 wsrep_cluster_name = galera
-wsrep_cluster_address = "gcomm://{{WSREP_CLUSTER_ADDRESSES}}"
+wsrep_cluster_address = "gcomm://{{wsrep_cluster_addresses}}"
 
 # Galera Node Configuration
 wsrep_node_address = "{{wsrep_node_name}}:4567"
