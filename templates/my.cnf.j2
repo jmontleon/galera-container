@@ -23,12 +23,12 @@ wsrep_cluster_name = galera
 wsrep_cluster_address = "gcomm://{{WSREP_CLUSTER_ADDRESSES}}"
 
 # Galera Node Configuration
-wsrep_node_address = "{{WSREP_NODE_ADDRESS}}:4567"
-wsrep_node_name = "{{WSREP_NODE_ADDRESS}}"
+wsrep_node_address = "{{wsrep_node_name}}:4567"
+wsrep_node_name = "{{wsrep_node_name}}"
 
 # Galera Synchronization Congifuration
 wsrep_sst_method = rsync
-wsrep_sst_auth = "root:{{MARIADB_ROOT_PASSWORD}}"
+wsrep_sst_auth = "root:{{mariadb_root_password}}"
 
 socket = "/var/lib/mysql/mysql.sock"
 
