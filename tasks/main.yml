@@ -101,9 +101,7 @@
     group: root
     mode: 0775
   with_items:
-  - /var/lib/mysql
   - /setup
-  - /var/lib/mysql
 
 - name: Copy startup files
   copy:
