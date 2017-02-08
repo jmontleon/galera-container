@@ -4,7 +4,7 @@
   set_fact:
     wsrep_cluster_addresses: "{{ lookup('env', 'WSREP_CLUSTER_ADDRESSES') | default('admin', true) }}"
     wsrep_node_name: "{{ lookup('env', 'WSREP_NODE_NAME') | default('admin', true) }}"
-    mariadb_root_password: "{{ lookup('env', 'MARIADB_ROOT_PASSWORD') | default(randompw.stdout, true) }}"
+    mariadb_root_password: "{{ lookup('env', 'MARIADB_ROOT_PASSWORD') | default('admin', true) }}"
 
 - name: Add mariabd repo
   yum_repository:
