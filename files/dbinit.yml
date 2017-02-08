@@ -41,7 +41,7 @@
       wait_for: port=3306 timeout=30  
     
     - name: Execute create root
-      shell: cat /setup/create_root.sql | mysql --protocol=socket -uroot
+      shell: sleep 20; cat /setup/create_root.sql | mysql --protocol=socket -uroot
     
     - name: Execute createdb 
       shell: cat /setup/createdb.sql | mysql --protocol=socket -uroot -p"{{ mariadb_root_password }}"
