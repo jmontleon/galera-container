@@ -57,7 +57,7 @@
       - /setup/*.sql
     
     - name: Kill the background process
-      shell: kill -s TERM {{ mysql_pid.stdout }}
+      shell: kill -s TERM {{ mysql_pid.stdout_lines[0] }}
 
     - name: Show the root password
       debug: msg="Set the root password to {{ mariadb_root_password }}"
